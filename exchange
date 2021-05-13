@@ -12,3 +12,22 @@ session    required     pam_loginuid.so
 session    required     pam_selinux.so open env_params
 session    optional     pam_keyinit.so force revoke
 session    include      password-auth
+
+root@10.12.4.16--> ~]#cat /etc/ssh/sshd_config |grep -v ^$ |grep -v ^#
+Protocol 2
+SyslogFacility AUTHPRIV
+AuthorizedKeysFile      .ssh/authorized_keys
+GSSAPIAuthentication yes
+GSSAPIStrictAcceptorCheck yes
+AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
+AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
+AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE
+AcceptEnv XMODIFIERS
+X11Forwarding yes
+Subsystem       sftp    /usr/libexec/openssh/sftp-server
+DenyUsers logkitagent
+Banner    /etc/issue.net
+KexAlgorithms diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group1-sha1,curve25519-sha256
+PermitRootLogin yes
+PasswordAuthentication yes
+UsePAM yes
