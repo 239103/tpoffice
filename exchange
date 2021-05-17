@@ -31,3 +31,126 @@ KexAlgorithms diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hell
 PermitRootLogin yes
 PasswordAuthentication yes
 UsePAM yes
+
+root@10.12.4.16--> ~]#tail -100f /var/log/secure
+May 17 11:40:11 shtpicoreywapp06 sshd[55646]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:40:11 shtpicoreywapp06 sshd[55646]: Connection closed by 10.4.66.1 port 56134
+May 17 11:40:12 shtpicoreywapp06 sshd[55647]: Accepted publickey for tpiapp from 10.4.66.1 port 56136 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:40:12 shtpicoreywapp06 sshd[55647]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:40:12 shtpicoreywapp06 sshd[55650]: Received disconnect from 10.4.66.1 port 56136:11: disconnected by user
+May 17 11:40:12 shtpicoreywapp06 sshd[55650]: Disconnected from user tpiapp 10.4.66.1 port 56136
+May 17 11:40:12 shtpicoreywapp06 sshd[55647]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:40:13 shtpicoreywapp06 sshd[55710]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:40:13 shtpicoreywapp06 sshd[55710]: Connection closed by 10.4.66.1 port 56188
+May 17 11:40:13 shtpicoreywapp06 sshd[55711]: Accepted publickey for tpiapp from 10.4.66.1 port 56192 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:40:13 shtpicoreywapp06 sshd[55711]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:40:13 shtpicoreywapp06 sshd[55733]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:40:13 shtpicoreywapp06 sshd[55733]: Connection closed by 10.4.66.1 port 56200
+May 17 11:40:13 shtpicoreywapp06 sshd[55737]: Accepted publickey for tpiapp from 10.4.66.1 port 56202 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:40:13 shtpicoreywapp06 sshd[55737]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:40:13 shtpicoreywapp06 sshd[55714]: Received disconnect from 10.4.66.1 port 56192:11: disconnected by user
+May 17 11:40:13 shtpicoreywapp06 sshd[55714]: Disconnected from user tpiapp 10.4.66.1 port 56192
+May 17 11:40:13 shtpicoreywapp06 sshd[55711]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:40:13 shtpicoreywapp06 sshd[55740]: Received disconnect from 10.4.66.1 port 56202:11: disconnected by user
+May 17 11:40:13 shtpicoreywapp06 sshd[55740]: Disconnected from user tpiapp 10.4.66.1 port 56202
+May 17 11:40:13 shtpicoreywapp06 sshd[55737]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:42:02 shtpicoreywapp06 sshd[71260]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:42:02 shtpicoreywapp06 sshd[71260]: Connection closed by 10.4.66.1 port 56848
+May 17 11:42:02 shtpicoreywapp06 sshd[71283]: Accepted publickey for tpiapp from 10.4.66.1 port 56854 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:42:02 shtpicoreywapp06 sshd[71283]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:42:02 shtpicoreywapp06 sshd[71294]: Received disconnect from 10.4.66.1 port 56854:11: disconnected by user
+May 17 11:42:02 shtpicoreywapp06 sshd[71294]: Disconnected from user tpiapp 10.4.66.1 port 56854
+May 17 11:42:02 shtpicoreywapp06 sshd[71283]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:42:03 shtpicoreywapp06 sshd[71544]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:42:03 shtpicoreywapp06 sshd[71544]: Connection closed by 10.4.66.1 port 56912
+May 17 11:42:03 shtpicoreywapp06 sshd[71578]: Accepted publickey for tpiapp from 10.4.66.1 port 56916 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:42:03 shtpicoreywapp06 sshd[71578]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:42:03 shtpicoreywapp06 sshd[71641]: Received disconnect from 10.4.66.1 port 56916:11: disconnected by user
+May 17 11:42:03 shtpicoreywapp06 sshd[71641]: Disconnected from user tpiapp 10.4.66.1 port 56916
+May 17 11:42:03 shtpicoreywapp06 sshd[71578]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:42:04 shtpicoreywapp06 sshd[71890]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:42:04 shtpicoreywapp06 sshd[71890]: Connection closed by 10.4.66.1 port 57026
+May 17 11:42:04 shtpicoreywapp06 sshd[71893]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:42:04 shtpicoreywapp06 sshd[71893]: Connection closed by 10.4.66.1 port 57034
+May 17 11:42:04 shtpicoreywapp06 sshd[71891]: Accepted publickey for tpiapp from 10.4.66.1 port 57028 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:42:04 shtpicoreywapp06 sshd[71891]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:42:04 shtpicoreywapp06 sshd[71895]: Accepted publickey for tpiapp from 10.4.66.1 port 57038 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:42:04 shtpicoreywapp06 sshd[71895]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:42:04 shtpicoreywapp06 sshd[71897]: Received disconnect from 10.4.66.1 port 57028:11: disconnected by user
+May 17 11:42:04 shtpicoreywapp06 sshd[71897]: Disconnected from user tpiapp 10.4.66.1 port 57028
+May 17 11:42:04 shtpicoreywapp06 sshd[71891]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:42:05 shtpicoreywapp06 sshd[71904]: Received disconnect from 10.4.66.1 port 57038:11: disconnected by user
+May 17 11:42:05 shtpicoreywapp06 sshd[71904]: Disconnected from user tpiapp 10.4.66.1 port 57038
+May 17 11:42:05 shtpicoreywapp06 sshd[71895]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:42:16 shtpicoreywapp06 sshd[72199]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:42:16 shtpicoreywapp06 sshd[72199]: Connection closed by 10.4.66.1 port 58036
+May 17 11:42:16 shtpicoreywapp06 sshd[72200]: Accepted publickey for tpiapp from 10.4.66.1 port 58038 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:42:16 shtpicoreywapp06 sshd[72200]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:42:16 shtpicoreywapp06 sshd[72202]: Received disconnect from 10.4.66.1 port 58038:11: disconnected by user
+May 17 11:42:16 shtpicoreywapp06 sshd[72202]: Disconnected from user tpiapp 10.4.66.1 port 58038
+May 17 11:42:16 shtpicoreywapp06 sshd[72200]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:42:19 shtpicoreywapp06 sshd[72234]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:42:19 shtpicoreywapp06 sshd[72234]: Connection closed by 10.4.66.1 port 58416
+May 17 11:42:19 shtpicoreywapp06 sshd[72235]: Accepted publickey for tpiapp from 10.4.66.1 port 58418 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:42:19 shtpicoreywapp06 sshd[72235]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:42:20 shtpicoreywapp06 sshd[72237]: Received disconnect from 10.4.66.1 port 58418:11: disconnected by user
+May 17 11:42:20 shtpicoreywapp06 sshd[72237]: Disconnected from user tpiapp 10.4.66.1 port 58418
+May 17 11:42:20 shtpicoreywapp06 sshd[72235]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:42:20 shtpicoreywapp06 sshd[72258]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:42:20 shtpicoreywapp06 sshd[72258]: Connection closed by 10.4.66.1 port 58478
+May 17 11:42:20 shtpicoreywapp06 sshd[72259]: Accepted publickey for tpiapp from 10.4.66.1 port 58484 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:42:20 shtpicoreywapp06 sshd[72259]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:42:20 shtpicoreywapp06 sshd[72261]: Received disconnect from 10.4.66.1 port 58484:11: disconnected by user
+May 17 11:42:20 shtpicoreywapp06 sshd[72261]: Disconnected from user tpiapp 10.4.66.1 port 58484
+May 17 11:42:20 shtpicoreywapp06 sshd[72259]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:46:02 shtpicoreywapp06 sshd[94263]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:46:02 shtpicoreywapp06 sshd[94263]: Connection closed by 10.4.66.1 port 59744
+May 17 11:46:02 shtpicoreywapp06 sshd[94274]: Accepted publickey for tpiapp from 10.4.66.1 port 59748 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:46:02 shtpicoreywapp06 sshd[94274]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:46:02 shtpicoreywapp06 sshd[94308]: Received disconnect from 10.4.66.1 port 59748:11: disconnected by user
+May 17 11:46:02 shtpicoreywapp06 sshd[94308]: Disconnected from user tpiapp 10.4.66.1 port 59748
+May 17 11:46:02 shtpicoreywapp06 sshd[94274]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:46:02 shtpicoreywapp06 sshd[94337]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:46:02 shtpicoreywapp06 sshd[94337]: Connection closed by 10.4.66.1 port 59804
+May 17 11:46:02 shtpicoreywapp06 sshd[94341]: Accepted publickey for tpiapp from 10.4.66.1 port 59806 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:46:02 shtpicoreywapp06 sshd[94341]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:46:03 shtpicoreywapp06 sshd[94343]: Received disconnect from 10.4.66.1 port 59806:11: disconnected by user
+May 17 11:46:03 shtpicoreywapp06 sshd[94343]: Disconnected from user tpiapp 10.4.66.1 port 59806
+May 17 11:46:03 shtpicoreywapp06 sshd[94341]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:46:04 shtpicoreywapp06 sshd[94371]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:46:04 shtpicoreywapp06 sshd[94371]: Connection closed by 10.4.66.1 port 59948
+May 17 11:46:04 shtpicoreywapp06 sshd[94374]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:46:04 shtpicoreywapp06 sshd[94374]: Connection closed by 10.4.66.1 port 59956
+May 17 11:46:04 shtpicoreywapp06 sshd[94372]: Accepted publickey for tpiapp from 10.4.66.1 port 59952 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:46:04 shtpicoreywapp06 sshd[94372]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:46:04 shtpicoreywapp06 sshd[94375]: Accepted publickey for tpiapp from 10.4.66.1 port 59958 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:46:04 shtpicoreywapp06 sshd[94375]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:46:04 shtpicoreywapp06 sshd[94377]: Received disconnect from 10.4.66.1 port 59952:11: disconnected by user
+May 17 11:46:04 shtpicoreywapp06 sshd[94377]: Disconnected from user tpiapp 10.4.66.1 port 59952
+May 17 11:46:04 shtpicoreywapp06 sshd[94372]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:46:04 shtpicoreywapp06 sshd[94383]: Received disconnect from 10.4.66.1 port 59958:11: disconnected by user
+May 17 11:46:04 shtpicoreywapp06 sshd[94383]: Disconnected from user tpiapp 10.4.66.1 port 59958
+May 17 11:46:04 shtpicoreywapp06 sshd[94375]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:46:15 shtpicoreywapp06 sshd[99031]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:46:15 shtpicoreywapp06 sshd[99031]: Connection closed by 10.4.66.1 port 60946
+May 17 11:46:16 shtpicoreywapp06 sshd[99032]: Accepted publickey for tpiapp from 10.4.66.1 port 60950 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:46:16 shtpicoreywapp06 sshd[99032]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:46:16 shtpicoreywapp06 sshd[99034]: Received disconnect from 10.4.66.1 port 60950:11: disconnected by user
+May 17 11:46:16 shtpicoreywapp06 sshd[99034]: Disconnected from user tpiapp 10.4.66.1 port 60950
+May 17 11:46:16 shtpicoreywapp06 sshd[99032]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:46:19 shtpicoreywapp06 sshd[99256]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:46:19 shtpicoreywapp06 sshd[99256]: Connection closed by 10.4.66.1 port 33100
+May 17 11:46:19 shtpicoreywapp06 sshd[99257]: Accepted publickey for tpiapp from 10.4.66.1 port 33106 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:46:19 shtpicoreywapp06 sshd[99257]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:46:20 shtpicoreywapp06 sshd[99259]: Received disconnect from 10.4.66.1 port 33106:11: disconnected by user
+May 17 11:46:20 shtpicoreywapp06 sshd[99259]: Disconnected from user tpiapp 10.4.66.1 port 33106
+May 17 11:46:20 shtpicoreywapp06 sshd[99257]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:46:20 shtpicoreywapp06 sshd[99282]: error: kex_exchange_identification: Connection closed by remote host
+May 17 11:46:20 shtpicoreywapp06 sshd[99282]: Connection closed by 10.4.66.1 port 33170
+May 17 11:46:20 shtpicoreywapp06 sshd[99296]: Accepted publickey for tpiapp from 10.4.66.1 port 33174 ssh2: RSA SHA256:cm0Ldq+jfdJSAzW0lAANkjtyysumkwoXkGxCcgnEr5g
+May 17 11:46:20 shtpicoreywapp06 sshd[99296]: pam_unix(sshd:session): session opened for user tpiapp by (uid=0)
+May 17 11:46:20 shtpicoreywapp06 sshd[99298]: Received disconnect from 10.4.66.1 port 33174:11: disconnected by user
+May 17 11:46:20 shtpicoreywapp06 sshd[99298]: Disconnected from user tpiapp 10.4.66.1 port 33174
+May 17 11:46:20 shtpicoreywapp06 sshd[99296]: pam_unix(sshd:session): session closed for user tpiapp
+May 17 11:48:10 shtpicoreywapp06 su: pam_unix(su:session): session opened for user tpiapp by (uid=0)
+May 17 11:48:16 shtpicoreywapp06 su: pam_unix(su:session): session closed for user tpiapp
