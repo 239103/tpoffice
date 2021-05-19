@@ -154,3 +154,144 @@ May 17 11:46:20 shtpicoreywapp06 sshd[99298]: Disconnected from user tpiapp 10.4
 May 17 11:46:20 shtpicoreywapp06 sshd[99296]: pam_unix(sshd:session): session closed for user tpiapp
 May 17 11:48:10 shtpicoreywapp06 su: pam_unix(su:session): session opened for user tpiapp by (uid=0)
 May 17 11:48:16 shtpicoreywapp06 su: pam_unix(su:session): session closed for user tpiapp
+
+$ strace git clone https://github.com/239103/flasky 
+execve("/bin/git", ["git", "clone", "https://github.com/239103/flasky"], [/* 27 vars */]) = 0
+brk(NULL)                               = 0x1ef4000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f190726d000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("tls/x86_64/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("x86_64/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("libz.so.1", O_RDONLY|O_CLOEXEC)   = -1 ENOENT (No such file or directory)
+open("/tpsys/tools/instantclient_11_2/tls/x86_64/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/tpsys/tools/instantclient_11_2/tls/x86_64", 0x7fff8c0d4b00) = -1 ENOENT (No such file or directory)
+open("/tpsys/tools/instantclient_11_2/tls/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/tpsys/tools/instantclient_11_2/tls", 0x7fff8c0d4b00) = -1 ENOENT (No such file or directory)
+open("/tpsys/tools/instantclient_11_2/x86_64/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/tpsys/tools/instantclient_11_2/x86_64", 0x7fff8c0d4b00) = -1 ENOENT (No such file or directory)
+open("/tpsys/tools/instantclient_11_2/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/tpsys/tools/instantclient_11_2", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=45907, ...}) = 0
+mmap(NULL, 45907, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f1907261000
+close(3)                                = 0
+open("/lib64/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20!\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=90248, ...}) = 0
+mmap(NULL, 2183272, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1906e37000
+mprotect(0x7f1906e4c000, 2093056, PROT_NONE) = 0
+mmap(0x7f190704b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x7f190704b000
+close(3)                                = 0
+open("tls/x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("x86_64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/tpsys/tools/instantclient_11_2/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200m\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=142144, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1907260000
+mmap(NULL, 2208904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1906c1b000
+mprotect(0x7f1906c32000, 2093056, PROT_NONE) = 0
+mmap(0x7f1906e31000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16000) = 0x7f1906e31000
+mmap(0x7f1906e33000, 13448, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1906e33000
+close(3)                                = 0
+open("tls/x86_64/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("x86_64/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("librt.so.1", O_RDONLY|O_CLOEXEC)  = -1 ENOENT (No such file or directory)
+open("/tpsys/tools/instantclient_11_2/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib64/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\"\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=43712, ...}) = 0
+mmap(NULL, 2128952, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1906a13000
+mprotect(0x7f1906a1a000, 2093056, PROT_NONE) = 0
+mmap(0x7f1906c19000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7f1906c19000
+close(3)                                = 0
+open("tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("libc.so.6", O_RDONLY|O_CLOEXEC)   = -1 ENOENT (No such file or directory)
+open("/tpsys/tools/instantclient_11_2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`&\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=2156344, ...}) = 0
+mmap(NULL, 3985920, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1906645000
+mprotect(0x7f1906809000, 2093056, PROT_NONE) = 0
+mmap(0x7f1906a08000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c3000) = 0x7f1906a08000
+mmap(0x7f1906a0e000, 16896, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1906a0e000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f190725f000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f190725d000
+arch_prctl(ARCH_SET_FS, 0x7f190725d740) = 0
+mprotect(0x7f1906a08000, 16384, PROT_READ) = 0
+mprotect(0x7f1906e31000, 4096, PROT_READ) = 0
+mprotect(0x7f1906c19000, 4096, PROT_READ) = 0
+mprotect(0x7f190704b000, 4096, PROT_READ) = 0
+mprotect(0x8ac000, 4096, PROT_READ)     = 0
+mprotect(0x7f190726e000, 4096, PROT_READ) = 0
+munmap(0x7f1907261000, 45907)           = 0
+set_tid_address(0x7f190725da10)         = 106685
+set_robust_list(0x7f190725da20, 24)     = 0
+rt_sigaction(SIGRTMIN, {0x7f1906c21860, [], SA_RESTORER|SA_SIGINFO, 0x7f1906c2a630}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {0x7f1906c218f0, [], SA_RESTORER|SA_RESTART|SA_SIGINFO, 0x7f1906c2a630}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+getrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+open("/dev/null", O_RDWR)               = 3
+close(3)                                = 0
+rt_sigprocmask(SIG_UNBLOCK, [PIPE], NULL, 8) = 0
+rt_sigaction(SIGPIPE, {SIG_DFL, [PIPE], SA_RESTORER|SA_RESTART, 0x7f190667b450}, {SIG_DFL, [], 0}, 8) = 0
+brk(NULL)                               = 0x1ef4000
+brk(0x1f15000)                          = 0x1f15000
+brk(NULL)                               = 0x1f15000
+stat("/root/share/locale", 0x7fff8c0d6220) = -1 EACCES (Permission denied)
+access("/root/etc/gitconfig", R_OK)     = -1 EACCES (Permission denied)
+access("/home/appuser/.config/git/config", R_OK) = -1 ENOENT (No such file or directory)
+access("/home/appuser/.gitconfig", R_OK) = 0
+open("/home/appuser/.gitconfig", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=70, ...}) = 0
+fstat(3, {st_mode=S_IFREG|0664, st_size=70, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f190726c000
+read(3, "[user]\n\tname = hepan@ft.cntaipin"..., 4096) = 70
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+munmap(0x7f190726c000, 4096)            = 0
+stat("https://github.com/239103/flasky/.git", 0x7fff8c0d5aa0) = -1 ENOENT (No such file or directory)
+stat("https://github.com/239103/flasky", 0x7fff8c0d5aa0) = -1 ENOENT (No such file or directory)
+stat("https://github.com/239103/flasky.git/.git", 0x7fff8c0d5aa0) = -1 ENOENT (No such file or directory)
+stat("https://github.com/239103/flasky.git", 0x7fff8c0d5aa0) = -1 ENOENT (No such file or directory)
+stat("https://github.com/239103/flasky.bundle", 0x7fff8c0d5aa0) = -1 ENOENT (No such file or directory)
+stat("https://github.com/239103/flasky", 0x7fff8c0d5aa0) = -1 ENOENT (No such file or directory)
+stat("/etc/sysconfig/64bit_strstr_via_64bit_strstr_sse2_unaligned", 0x7fff8c0d56f0) = -1 ENOENT (No such file or directory)
+stat("flasky", 0x7fff8c0d5d10)          = -1 ENOENT (No such file or directory)
+rt_sigaction(SIGINT, {0x4221a0, [INT], SA_RESTORER|SA_RESTART, 0x7f190667b450}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGHUP, {0x4221a0, [HUP], SA_RESTORER|SA_RESTART, 0x7f190667b450}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGTERM, {0x4221a0, [TERM], SA_RESTORER|SA_RESTART, 0x7f190667b450}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGQUIT, {0x4221a0, [QUIT], SA_RESTORER|SA_RESTART, 0x7f190667b450}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGPIPE, {0x4221a0, [PIPE], SA_RESTORER|SA_RESTART, 0x7f190667b450}, {SIG_DFL, [PIPE], SA_RESTORER|SA_RESTART, 0x7f190667b450}, 8) = 0
+mkdir("flasky", 0777)                   = 0
+getcwd("/home/appuser", 129)            = 14
+lstat("/home/appuser/flasky", {st_mode=S_IFDIR|0775, st_size=6, ...}) = 0
+stat("flasky", {st_mode=S_IFDIR|0775, st_size=6, ...}) = 0
+write(2, "Cloning into 'flasky'...\n", 25Cloning into 'flasky'...
+) = 25
+getcwd("/home/appuser", 129)            = 14
+lstat("/home/appuser/flasky", {st_mode=S_IFDIR|0775, st_size=6, ...}) = 0
+lstat("/home/appuser/flasky/.git", 0x7fff8c0d5800) = -1 ENOENT (No such file or directory)
+getcwd("/home/appuser", 129)            = 14
+lstat("/home/appuser/flasky", {st_mode=S_IFDIR|0775, st_size=6, ...}) = 0
+lstat("/home/appuser/flasky/.git", 0x7fff8c0d5800) = -1 ENOENT (No such file or directory)
+stat("/home/appuser/flasky/.git", 0x7fff8c0d5730) = -1 ENOENT (No such file or directory)
+lstat("/home/appuser/flasky/.git/commondir", 0x7fff8c0d5700) = -1 ENOENT (No such file or directory)
+access("/root/etc/gitconfig", R_OK)     = -1 EACCES (Permission denied)
+write(2, "fatal: unable to access '/root/e"..., 65fatal: unable to access '/root/etc/gitconfig': Permission denied
+) = 65
+openat(AT_FDCWD, "flasky/.git", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "flasky", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 2 entries */, 32768)     = 48
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+rmdir("flasky")                         = 0
+exit_group(128)                         = ?
++++ exited with 128 +++
