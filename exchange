@@ -1,17 +1,18 @@
-#!/bin/bash
+# cat /usr/lib/systemd/system/sshd.service 
+[Unit]
+Description=OpenSSH server daemon
+Documentation=man:sshd(8) man:sshd_config(5)
+After=network.target sshd-keygen.service
+Wants=sshd-keygen.service
 
-if [ -f /etc/grub.conf ]
-then
-        grep '^password' /etc/grub.conf &> /dev/null
-        if [ $? -eq 1 ]
-        then
-                sed -i '/^splashimage=/a\password --md5 $1$AR46N1$BKNHsZyzTy6d32ON.sHZq0' /etc/grub.conf
-        fi
-fi
+[Service]
+Type=notify
+EnvironmentFile=/etc/sysconfig/sshd
+ExecStart=/usr/sbin/sshd -D $OPTIONS
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+RestartSec=42s
 
-if [ -d /boot/grub2/ ]
-then
-	cat > /boot/grub2/user.cfg << EOF
-GRUB2_PASSWORD=grub.pbkdf2.sha512.10000.2A14B8C8DF08440EF3413D0EFA4D749ABAE9A302005B1B9A880059DAF19D59A207CB08421BB8946B2642D9BDAFD390A381B9DAE436CDB6B725559B78BD02E443.2E1E489DD23916D9C09ADE3B21F6B3D6430AEFC91DB3BEE6DBC837D5462C2348B42500CBB6214EC99C13B9144574AA1D22C333553DFBEE431A3F1A02B06E245D
-EOF
-fi
+[Install]
+WantedBy=multi-user.targe
